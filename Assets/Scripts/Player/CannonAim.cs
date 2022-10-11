@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CannonAim : MonoBehaviour
 {
-    public float shootingPower = 1000f;
+    public float shootingPower = 800f;
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
@@ -18,8 +18,7 @@ public class CannonAim : MonoBehaviour
     {
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-
+  
         if (Input.GetButtonDown("Fire1"))
         {
             rb.AddForce(-transform.up * shootingPower);
