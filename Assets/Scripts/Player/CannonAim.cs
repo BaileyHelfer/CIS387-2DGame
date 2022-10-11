@@ -25,6 +25,11 @@ public class CannonAim : MonoBehaviour
             rb.AddForce(-transform.up * shootingPower);
         }
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(-transform.up * shootingPower);
+        }
+
     }
 
     void FixedUpdate()
