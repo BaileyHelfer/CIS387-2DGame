@@ -6,6 +6,7 @@ public class CannonAim : MonoBehaviour
 {
     public float shootingPower = 1000f;
     public float moveSpeed = 5f;
+    
 
     public Rigidbody2D rb;
     public Camera cam;
