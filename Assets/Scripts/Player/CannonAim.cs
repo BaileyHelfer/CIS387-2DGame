@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CannonAim : MonoBehaviour
 {
-    public float shootingPower = 1000f;
+    public float shootingPower = 4000f;
     public float moveSpeed = 5f;
+    
 
     public Rigidbody2D rb;
     public Camera cam;
-
+    public float cooldown;
+    float lastshot;
     Vector2 mousePos;
 
 
@@ -18,10 +20,15 @@ public class CannonAim : MonoBehaviour
     {
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-
+        
         if (Input.GetButtonDown("Fire1"))
         {
+            if (Time.time - lastshot < cooldown)
+            {
+                Debug.Log(Time.time - lastshot);
+                return;
+            }
+            lastshot = Time.time;
             rb.AddForce(-transform.up * shootingPower);
         }
 

@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousepos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        Debug.Log(angle);
         if (transform.position.x <= -60)
         {
             transform.position = new Vector3(-60, transform.position.y, 0);
@@ -28,7 +27,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(-59, -3, 0);
         }
-        if (angle < 0.0 && angle > -180.0)
+        if (angle <= 0.0 && angle >= -180.0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
