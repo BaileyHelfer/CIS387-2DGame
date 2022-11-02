@@ -5,19 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void Start()
+    bool LoadingInitiated = false;
+    int x;
+
+    public void PlayGame()
     {
-        GetComponent<AudioSource>().Play();
+        if (!LoadingInitiated)
+        {
+            x = 0;
+            StartCoroutine(DelayedLoad(x));
+            LoadingInitiated = true;
+        }
     }
 
-    public void PlayGame ()
+    public void QuitGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            x = 1;
+            StartCoroutine(DelayedLoad(x));
+            LoadingInitiated = true;
     }
 
-    public void ExitGame ()
+    IEnumerator DelayedLoad(int y)
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        //GetComponent<AudioSource>().Play();
+
+        yield return new WaitForSeconds(1);
+
+        if (x == 0)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else
+            Application.Quit();
+
     }
 }
