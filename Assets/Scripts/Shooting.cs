@@ -8,7 +8,8 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet;
     public Transform bulletTransform;
-
+    public float cooldown;
+    float lastshot;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,12 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+            if (Time.time - lastshot < cooldown)
+            {
+                Debug.Log(Time.time - lastshot);
+                return;
+            }
+            lastshot = Time.time;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
     }

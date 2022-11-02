@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1509097768}
   bulletTransform: {fileID: 979841305}
+  cooldown: 0.5
 --- !u!1 &251776313
 GameObject:
   m_ObjectHideFlags: 0
@@ -7025,6 +7026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  cooldown: 0.5
 --- !u!50 &1509097772
 Rigidbody2D:
   serializedVersion: 4
@@ -7409,7 +7411,7 @@ MonoBehaviour:
   moveSpeed: 1
   rb: {fileID: 1592790590}
   cam: {fileID: 450300547}
-  cooldown: 0.3
+  cooldown: 0.5
 --- !u!233 &1592790593
 HingeJoint2D:
   m_ObjectHideFlags: 0

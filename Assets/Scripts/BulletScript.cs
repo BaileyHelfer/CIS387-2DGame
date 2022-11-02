@@ -8,11 +8,18 @@ public class BulletScript : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
+    public float cooldown;
+    float lastshot;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //if (Time.time - lastshot < cooldown)
+        //{
+        //    Debug.Log(Time.time - lastshot);
+        //    return;
+        //}
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
