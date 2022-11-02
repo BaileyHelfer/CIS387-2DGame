@@ -12,8 +12,8 @@ public class TrapKB : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Traps"))
         {
-
             rb.velocity = new Vector3(0, 10, 0);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
