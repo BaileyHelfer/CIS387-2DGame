@@ -7409,6 +7409,7 @@ MonoBehaviour:
   moveSpeed: 1
   rb: {fileID: 1592790590}
   cam: {fileID: 450300547}
+  cooldown: 0.3
 --- !u!233 &1592790593
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -8546,7 +8547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  movementSpeed: 1
+  movementSpeed: 3
 --- !u!1 &2114340983
 GameObject:
   m_ObjectHideFlags: 0
