@@ -30,12 +30,13 @@ public class CannonAim : MonoBehaviour
             }
             lastshot = Time.time;
             rb.AddForce(-transform.up * shootingPower);
+            GetComponent<AudioSource>().Play();
         }
 
-        if (Input.GetButtonDown("Jump"))
+        /*if (Input.GetButtonDown("Jump"))
         {
             rb.AddForce(-transform.up * shootingPower);
-        }
+        }*/
 
     }
 
