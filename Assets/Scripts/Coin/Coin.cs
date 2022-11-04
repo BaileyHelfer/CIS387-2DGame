@@ -11,6 +11,6 @@ public class Coin : MonoBehaviour
         {
             ScoreManager.instance.ChangeScore(coinValue);
         }
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    bool isgrounded = true;
     public float movementSpeed = 1;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(theCollision.gameObject.name);
         if (theCollision.gameObject.name == "floor")
         {
-            isgrounded = true;
         }
     }
 
@@ -35,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(theCollision.gameObject.name);
         if (theCollision.gameObject.name == "floor")
         {
-            isgrounded = false;
         }
     }
 }
