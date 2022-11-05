@@ -4,38 +4,48 @@ using UnityEngine;
 
 public class sideMove : MonoBehaviour
 {
+    [SerializeField] float offsetLeft = -1, offsetRight = 1, speed = 1;
+    [SerializeField] bool hasReachedRight = false, hasReachedLeft = false;
+    Vector3 startPosition = Vector3.zero;
 
-    public Transform pos1, pos2;
-    public float speed;
-    public Transform startPos;
-
-    Vector3 nextPos;
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        nextPos = startPos.position;
+        startPosition = transform.position;
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        if (transform.position== pos1.position)
+        if (!hasReachedRight)
         {
-            nextPos = pos2.position;
+            if (transform.position.x < startPosition.x + offsetRight)
+            {
+                Move(offsetRight);
+            }
+            else if (transform.position.x >= startPosition.x + offsetRight)
+            {
+                hasReachedRight = true;
+                hasReachedLeft = false;
+            }
         }
-        if (transform.position == pos2.position)
+        else if (!hasReachedLeft)
         {
-            nextPos = pos1.position;
+            if (transform.position.x > startPosition.x + offsetLeft)
+            {
+                Move(offsetLeft);
+            }
+            else if (transform.position.x <= startPosition.x + offsetLeft)
+            {
+                hasReachedRight = false;
+                hasReachedLeft = true;
+            }
         }
-
-       
     }
 
-    private void OnDrawGizmos()
+    void Move(float offset)
     {
-        Gizmos.DrawLine(pos1.position, pos2.position);
+        transform.position = Vector3.MoveTowards(transform.position,
+                                                 new Vector3(startPosition.x + offset,
+                                                             transform.position.y,
+                                                             transform.position.z),
+                                                 speed * Time.deltaTime);
     }
-
 }

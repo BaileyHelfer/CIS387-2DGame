@@ -1324,10 +1324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1668980210}
-  pos2: {fileID: 129409685}
+  offsetLeft: 0
+  offsetRight: 0
   speed: 1
-  startPos: {fileID: 1668980210}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &212744927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,7 +1405,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15312,15 +15313,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833390584}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 887429869}
-  pos2: {fileID: 623507220}
+  offsetLeft: -1
+  offsetRight: 1
   speed: 1
-  startPos: {fileID: 887429869}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &833390587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15397,7 +15399,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17514,15 +17516,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153253869}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1413887954}
-  pos2: {fileID: 1434645919}
+  offsetLeft: -1
+  offsetRight: 1
   speed: 1
-  startPos: {fileID: 1413887954}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &1153253872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17599,7 +17602,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17933,15 +17936,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179398568}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 165227657}
-  pos2: {fileID: 1003068264}
+  offsetLeft: -1
+  offsetRight: 1
   speed: 1
-  startPos: {fileID: 165227657}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &1179398571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18018,7 +18022,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18042,7 +18046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179398568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.98, y: -3.2, z: 0}
+  m_LocalPosition: {x: -48.974, y: -3.341, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20730,15 +20734,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480143590}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1002579078}
-  pos2: {fileID: 1907236211}
+  offsetLeft: -1
+  offsetRight: 1
   speed: 1
-  startPos: {fileID: 1002579078}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &1480143593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20815,7 +20820,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -25252,15 +25257,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001693518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1089053343}
-  pos2: {fileID: 1165038307}
+  offsetLeft: -1
+  offsetRight: 1
   speed: 1
-  startPos: {fileID: 1089053343}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &2001693521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25337,7 +25343,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -25681,15 +25687,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074759817}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0423e26121b5a4e87f1bfd73ef751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1142387443}
-  pos2: {fileID: 778869060}
+  offsetLeft: -1
+  offsetRight: 1
   speed: 1
-  startPos: {fileID: 1142387443}
+  hasReachedRight: 0
+  hasReachedLeft: 0
 --- !u!114 &2074759820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25766,7 +25773,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

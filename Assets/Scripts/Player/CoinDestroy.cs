@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class CoinDestroy : MonoBehaviour
 {
@@ -14,6 +14,11 @@ public class CoinDestroy : MonoBehaviour
         {
             source.PlayOneShot(clip);
              Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("enemy"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
